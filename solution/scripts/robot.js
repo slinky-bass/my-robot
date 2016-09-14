@@ -109,6 +109,9 @@ var robot = {
     // Get value of #addItemInput and store in variable "newItem"
     var newItem = document.getElementById('addItemInput').value;
 
+    // convert string to lowercase
+    newItem = newItem.toLowerCase();
+
     // Add item to inventory array using push method
     this.inventory.push(newItem);
 
@@ -130,6 +133,22 @@ var robot = {
   // Search for an item to your robot's inventory
   findItem: function() {
 
+    // Prompt user for search query and save it to a variable
+    // named "searchQuery"
+    var searchQuery = prompt('What would you like to find?');
+
+    // Convert "searchQuery" to lowercase
+    searchQuery = searchQuery.toLowerCase();
+
+    // Use indexOf to find the index position of the searchQuery
+    // in the inventory array
+    var index = this.inventory.indexOf(searchQuery);
+
+    if(index) {
+      document.getElementById('caption').innerHTML = '<p>' + this.name + ': Found it!</p>';
+    } else {
+      document.getElementById('caption').innerHTML = '<p>' + this.name + ': I am sorry. I think I lost the "' + searchQuery + '".</p>';
+    }
 
   },
 
