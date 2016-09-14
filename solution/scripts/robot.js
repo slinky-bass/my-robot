@@ -84,7 +84,22 @@ var robot = {
   // Display inventory
   listItems: function() {
 
+    // Use a for loop to log each value in the inventory array to the console
 
+    // Create a variable "inventoryList" and add each item in the array to inventoryList to create a long string
+
+    // Display the results inside the caption
+
+    // Now concatenate html tags into the string so that it appears as an unordered list in the browser
+    var inventoryList = '<ul>';
+
+    for(var i = 0; i < this.inventory.length; i++) {
+      inventoryList += '<li>' + this.inventory[i] + '</li>';
+    }
+
+    inventoryList += '</ul>';
+
+    document.getElementById('caption').innerHTML = '<p>' + this.name + ': Let\'s see what I have in my pockets...</p>' + inventoryList;
 
   },
 
