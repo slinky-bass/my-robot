@@ -45,20 +45,24 @@ var robot = {
   },
   //############### TIME RELATED ##############
   // Display time
-  timeTeller: function() {
+  time: function() {
 
-    // Get current Date using Date object
+    // Create a new Date object and store it in a variable named "d"
     var d = new Date;
 
-    // Get hours and minutes using date object
+    // Get hours from d object using getHours() method and
+    // store it in a variable named "hours"
+    // Get hours from d object using getMinutes() method and
+    // store it in a variable named "minutes"
     var hours = d.getHours();
     var minutes = d.getMinutes();
 
-    // Concatenate for correct format
-    var time = hours + ':' + minutes;
+    // Concatenate "hours" and "minutes" to create a HH:MM format and
+    // store in a variable named "time"
+    var currentTime = hours + ':' + minutes;
 
-    // Display time
-    document.getElementById('caption').innerHTML ='<p>' + this.name + ': The time is now ' + time +'.</p>';
+    // Display the newly formatted time inside the caption box
+    document.getElementById('caption').innerHTML ='<p>' + this.name + ': The time is now ' + currentTime +'.</p>';
   },
 
   //############### INVENTORY RELATED ##############
