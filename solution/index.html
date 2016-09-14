@@ -12,6 +12,12 @@
     <div id="playground">
       <div id="caption"></div>
       <div id="robot"></div>
+      <div id="moveBtnSet">
+        <button onclick="robot.move('left')">Left</button>
+        <button onclick="robot.move('right')">Right</button>
+        <button onclick="robot.move('up')">Up</button>
+        <button onclick="robot.move('down')">Down</button>
+      </div>
     </div>
 
     <!-- Robot UI -->
@@ -39,10 +45,16 @@
 
       <div id="customControl">
         <h3> Customise the Robot </h3>
-        <!--  TODO Rename -->
+
+        <!-- Rename the robot -->
+        <p>Type a new name for your robot below</p>
         <input id="userNameInput" type="text">
         <button onclick ="robot.rename()">Rename Robot</button>
-        <!--  TODO Change colour -->
+
+        <!-- Change the colour of the robot -->
+        <p>Choose a new colour to paint the robot</p>
+        <div id="colorPallete">
+        </div>
       </div>
 
     </div>

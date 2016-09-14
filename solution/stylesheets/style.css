@@ -7,6 +7,7 @@
  left: 40px;
  background-color: blue;
  border: solid 2px black;
+ transition: 0.5s ease;
 }
 
 #caption {
@@ -31,3 +32,12 @@
   background-color: green;
 }
 
+.cell {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.cell:hover {
+  cursor: pointer;
+}

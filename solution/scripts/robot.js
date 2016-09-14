@@ -49,6 +49,20 @@ var robot = {
     document.getElementById('caption').innerHTML = '<p>' + this.name + ': From now on you can call me ' + this.name +'!</p>';
 
   },
+
+  // Paints the robot a different colour
+  // Can be used as an example to change style properties
+  paint: function(newColor) {
+
+    // Change the colour of the robot object
+    this.colour = newColor;
+
+    // Change the colour of the robot element
+    document.getElementById('robot').style.backgroundColor = newColor;
+
+    document.getElementById('caption').innerHTML ='<p>' + this.name + ': Oh my! I look amazing!</p>';
+
+  },
   //############### TIME RELATED ##############
   // Display time
   time: function() {
@@ -182,6 +196,61 @@ var robot = {
     } else {
       document.getElementById('caption').innerHTML = '<p>' + this.name + ': I am sorry. I think I lost the "' + searchQuery + '".</p>';
     }
+
+  },
+  // ############### MOVEMENT FUNCTIONS #########################
+  // Use the paint function as a guide on how to change style properties
+  // move robot
+  move: function(direction) {
+
+    var robot = document.getElementById('robot');
+    var playground = document.getElementById('playground');
+    var distance = 40;
+
+    // Get the position of the robot element relative to its parent
+    // (playground) by using the offsetLeft and offsetTop methods
+    // Assign the left offset value to the variable named 'x'
+    // Assign the top offset value to the variable named 'y'
+    // e.g. element.offsetLeft;
+
+    var x = robot.offsetLeft;
+    var y = robot.offsetTop;
+
+    // Use a switch statement to change the coordinates based on the direction
+    switch(direction) {
+      case 'left':
+      x -= distance;
+      break;
+
+      case 'right':
+      x += distance;
+      break;
+
+      case 'up':
+      y -= distance;
+      break;
+
+      case 'down':
+      y += distance;
+      break;
+    }
+
+    // BONUS: Use the javascript methods offsetHeight and offsetWidth as
+    // well as conditional statements to prevent themrobot from moving
+    // outside of the playground
+
+    // var boxHeight = playground.offsetHeight;
+    // var boxWidth = playground.offsetWidth;
+    //
+    // if(x < boxWidth && x > 0 && y < boxHeight && y > 0) {
+    //   robot.style.left = x + 'px';
+    //   robot.style.top = y + 'px';
+    // }
+
+    // Use style properties left and top to change the
+    // position of the robot element
+      robot.style.left = x + 'px';
+      robot.style.top = y + 'px';
 
   }
 };
