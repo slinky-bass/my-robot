@@ -9,21 +9,28 @@ var robot = {
   ],
   type: '',
   vocabulary: [
+    "Hello master!",
+    "How may I serve you?",
+    "Have a good day"
   ],
 
   //MY ROBOT FUNCTIONS - WHAT YOUR ROBOT CAN DO
-  
+
   //############### SPEECH RELATED ##############
   // Make robot speak
   speak: function(words) {
 
-    
+    // Gets phrase from vocabulary array at index position 'words'
+    var phrase = this.vocabulary[words];
+
+    // Prints to caption
+    document.getElementById('caption').innerHTML ='<p>' + this.name + ': ' + phrase +'!</p>';
 
   },
 
   // Greets user
   greeting: function() {
- 
+
     document.getElementById('caption').innerHTML ='<p>' + this.name + ': Hi! My name is ' + this.name +'!</p>';
 
   },
@@ -40,23 +47,23 @@ var robot = {
 
 
   },
-  
+
   // Add an item to your robot's inventory
   addItem: function() {
 
-    
+
   },
 
   // Remove an item to your robot's inventory
   removeItem: function() {
 
-    
+
   },
 
   // Search for an item to your robot's inventory
   findItem: function() {
 
-    
+
   },
 
   //############### WEAPONRY RELATED ############
@@ -65,10 +72,10 @@ var robot = {
 
 
   },
-  
+
   // Add a weapon to the robot's arsenal
   addWeapon: function() {
 
-    
+
   }
 };
