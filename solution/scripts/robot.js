@@ -18,10 +18,13 @@ var robot = {
 
   //############### SPEECH RELATED ##############
   // Make robot speak
-  speak: function(words) {
+  speak: function() {
+
+    // Prompt user for input
+    var index = prompt('Please select a phrase for me to say by typing a number from 0 to 2.');
 
     // Gets phrase from vocabulary array at index position 'words'
-    var phrase = this.vocabulary[words];
+    var phrase = this.vocabulary[index];
 
     // Prints to caption
     document.getElementById('caption').innerHTML ='<p>' + this.name + ': ' + phrase +'!</p>';
@@ -38,6 +41,11 @@ var robot = {
   // Rename your robot
   rename: function(newName){
 
+
+  },
+  //############### TIME RELATED ##############
+  // Display time
+  timeteller: function() {
 
   },
 
