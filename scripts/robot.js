@@ -95,6 +95,16 @@ var robot = {
   // Search for an item to your robot's inventory
   findItem: function() {
 
+    // Prompt user for search query and save it to a variable
+    // named "searchQuery"
+
+    // Convert "searchQuery" to lowercase
+
+    // Use indexOf to find the index position of the searchQuery
+    // in the inventory array
+
+    // Use a conditional statement to display a message in the
+    // caption based on the index position of the searchQuery
 
   },
 

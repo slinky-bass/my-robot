@@ -144,6 +144,8 @@ var robot = {
     // in the inventory array
     var index = this.inventory.indexOf(searchQuery);
 
+    // Use a conditional statement to display a message in the
+    // caption based on the index position of the searchQuery 
     if(index) {
       document.getElementById('caption').innerHTML = '<p>' + this.name + ': Found it!</p>';
     } else {
