@@ -45,8 +45,20 @@ var robot = {
   },
   //############### TIME RELATED ##############
   // Display time
-  timeteller: function() {
+  timeTeller: function() {
 
+    // Get current Date using Date object
+    var d = new Date;
+
+    // Get hours and minutes using date object
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+
+    // Concatenate for correct format
+    var time = hours + ':' + minutes;
+
+    // Display time
+    document.getElementById('caption').innerHTML ='<p>' + this.name + ': The time is now ' + time +'.</p>';
   },
 
   //############### INVENTORY RELATED ##############
