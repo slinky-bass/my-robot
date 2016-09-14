@@ -14,18 +14,37 @@
       <div id="robot"></div>
     </div>
 
-    <!-- Robot Actions -->
+    <!-- Robot UI -->
     <div id="actions">
-      <button onclick="robot.speak()">Say something</button>
-      <button onclick="robot.time()">What's the time?</button>
-      <button onclick="">Rename robot</button>
-      <br>
-      <!-- Create an input type text -->
-      <!-- Create a button with the value "Add to Inventory" that calls addItem() when the button is clicked -->
 
-      <!-- Create a button with the value "Display Inventory" that calls listItems() when the button is clicked -->
+      <div id="speakControl">
+        <h3> Make the Robot talk </h3>
 
-      <!-- Create a button with the value "Search Inventory" that calls findItem() when the button is clicked -->
+        <button onclick="robot.speak()">Say something</button>
+        <button onclick="robot.time()">What's the time?</button>
+      </div>
+
+      <div id="inventoryControl">
+        <h3> Inventory Control </h3>
+
+        <!-- These buttons use the value of the input field to search, remove and add items to the inventory-->
+
+        <!-- Create an input type text with the id of "userItemInput"-->
+        <!-- Create a button with the value "Add to Inventory" that calls addItem() when the button is clicked -->
+
+        <!-- Create a button with the value "Search Inventory" that calls findItem() when the button is clicked -->
+
+        <br>
+
+        <!-- Create a button with the value "Display Inventory" that calls listItems() when the button is clicked -->
+
+      </div>
+
+      <div id="customControl">
+        <h3> Customise the Robot </h3>
+        <!--  TODO Rename -->
+        <!--  TODO Change colour -->
+      </div>
 
     </div>
 

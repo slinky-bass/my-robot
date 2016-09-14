@@ -102,8 +102,8 @@ var robot = {
   // Add an item to your robot's inventory
   addItem: function() {
 
-    // Get value of #addItemInput and store in variable "newItem"
-    var newItem = document.getElementById('addItemInput').value;
+    // Get value of #userItemInput and store in variable "newItem"
+    var newItem = document.getElementById('userItemInput').value;
 
     // convert string to lowercase
     newItem = newItem.toLowerCase();
@@ -123,9 +123,9 @@ var robot = {
   // Remove an item to your robot's inventory
   removeItem: function() {
 
-    // Prompt user for search query and save it to a variable
+    // Get value of #userItemInput and save it to a variable
     // named "searchQuery"
-    var searchQuery = prompt('Which item would you like to remove?');
+    var searchQuery = document.getElementById('userItemInput').value;
 
     // Convert "searchQuery" to lowercase
     searchQuery = searchQuery.toLowerCase();
@@ -155,9 +155,9 @@ var robot = {
   // Search for an item to your robot's inventory
   findItem: function() {
 
-    // Prompt user for search query and save it to a variable
+    // Get value of #userItemInput and save it to a variable
     // named "searchQuery"
-    var searchQuery = prompt('What would you like to find?');
+    var searchQuery = document.getElementById('userItemInput').value;
 
     // Convert "searchQuery" to lowercase
     searchQuery = searchQuery.toLowerCase();
@@ -165,7 +165,7 @@ var robot = {
     // Use indexOf to find the index position of the searchQuery
     // in the inventory array
     var index = this.inventory.indexOf(searchQuery);
-  
+
     // Use a conditional statement to display a message in the
     // caption based on the index position of the searchQuery
     if(index > -1) {

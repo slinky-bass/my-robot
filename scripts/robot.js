@@ -3,10 +3,6 @@ var robot = {
   //MY ROBOT PROPERTIES - WHAT YOUR ROBOT HAS
   colour: 'blue',
   name: 'Engelbert',
-  weapons: [
-    'lasers',
-    'blasters'
-  ],
   type: '',
   vocabulary: [
   ],
@@ -18,8 +14,11 @@ var robot = {
   // Make robot speak
   speak: function(words) {
 
+    // Prompt user for input save results in a variable named "words"
 
+    // Gets phrase from vocabulary array at index position 'words'
 
+    // Prints to #caption
   },
 
   // Greets user
@@ -89,7 +88,22 @@ var robot = {
   // Remove an item to your robot's inventory
   removeItem: function() {
 
+    // Get value of #userItemInput and store in variable
+    // named "searchQuery"
 
+    // Convert "searchQuery" to lowercase
+
+    // Use indexOf to find the index position of the searchQuery
+    // in the inventory array
+
+    // Use a conditional statement to check the searchQuery was found
+
+    // Use the splice method to remove the item from the inventory
+    // array using the index position of the item if it was found
+
+    // Display message to let user know that the item was removed
+
+    // Else if the searchQuery was not found then display message to let user know that the item could not be found
   },
 
   // Search for an item to your robot's inventory
@@ -105,19 +119,6 @@ var robot = {
 
     // Use a conditional statement to display a message in the
     // caption based on the index position of the searchQuery
-
-  },
-
-  //############### WEAPONRY RELATED ############
-  // Display weapons
-  listWeapons: function() {
-
-
-  },
-
-  // Add a weapon to the robot's arsenal
-  addWeapon: function() {
-
 
   }
 };

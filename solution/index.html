@@ -16,15 +16,33 @@
 
     <!-- Robot UI -->
     <div id="actions">
-      <button onclick="robot.speak()">Say something</button>
-      <button onclick="robot.time()">What's the time?</button>
-      <button onclick="">Rename robot</button>
-      <br>
-      <input id="addItemInput" type="text">
-      <button onclick ="robot.addItem()">Add to inventory</button>
-      <button onclick ="robot.listItems()">Display inventory</button>
-      <button onclick ="robot.findItem()">Search inventory</button>
-      <button onclick ="robot.removeItem()">Remove Item</button>
+
+      <div id="speakControl">
+        <h3> Make the Robot talk </h3>
+
+        <button onclick="robot.speak()">Say something</button>
+        <button onclick="robot.time()">What's the time?</button>
+      </div>
+
+      <div id="inventoryControl">
+        <h3> Inventory Control </h3>
+
+        <!-- These buttons use the value of the input field to search, remove and add items to the inventory-->
+        <input id="userItemInput" type="text">
+        <button onclick ="robot.findItem()">Search</button>
+        <button onclick ="robot.addItem()">Add Item</button>
+        <button onclick ="robot.removeItem()">Remove Item</button>
+
+        <br>
+        <button onclick ="robot.listItems()">Display inventory</button>
+      </div>
+
+      <div id="customControl">
+        <h3> Customise the Robot </h3>
+        <!--  TODO Rename -->
+        <!--  TODO Change colour -->
+      </div>
+
     </div>
 
     <script src="scripts/robot.js" type="text/javascript"></script>
