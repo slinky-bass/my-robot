@@ -29,7 +29,8 @@ var robot = {
   },
 
   // Rename your robot
-  rename: function(newName){
+  rename: function(){
+
 
 
   },

@@ -36,8 +36,17 @@ var robot = {
   },
 
   // Rename your robot
-  rename: function(newName){
+  rename: function(){
 
+    // Get the new name value from #userNameInput input field
+    var newName = document.getElementById('userNameInput').value;
+
+    // Change the value of the name property of the robot object
+    this.name = newName;
+
+    // Display a message to the user to let them know that the
+    // name has changed
+    document.getElementById('caption').innerHTML = '<p>' + this.name + ': From now on you can call me ' + this.name +'!</p>';
 
   },
   //############### TIME RELATED ##############
