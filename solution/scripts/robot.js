@@ -3,10 +3,6 @@ var robot = {
   //MY ROBOT PROPERTIES - WHAT YOUR ROBOT HAS
   colour: 'blue',
   name: 'Engelbert',
-  weapons: [
-    'lasers',
-    'blasters'
-  ],
   type: '',
   vocabulary: [
     "Hello master!",
@@ -127,6 +123,32 @@ var robot = {
   // Remove an item to your robot's inventory
   removeItem: function() {
 
+    // Prompt user for search query and save it to a variable
+    // named "searchQuery"
+    var searchQuery = prompt('Which item would you like to remove?');
+
+    // Convert "searchQuery" to lowercase
+    searchQuery = searchQuery.toLowerCase();
+
+    // Use indexOf to find the index position of the searchQuery
+    // in the inventory array
+    var index = this.inventory.indexOf(searchQuery);
+    alert(index);
+
+    // Use a conditional statement to check the searchQuery was found
+    if(index > -1) {
+
+      // Use the splice method to remove the item from the inventory array using the index position of the item
+      this.inventory.splice(index, 1);
+
+      // Display message to let user know that the item was removed
+      document.getElementById('caption').innerHTML = '<p>' + this.name + ': "' + searchQuery + '" was removed from the inventory.</p>';
+
+    } else {
+
+      // Display message to let user know that the item could not be found
+      document.getElementById('caption').innerHTML = '<p>' + this.name + ': I am sorry. I think I lost the "' + searchQuery + '".</p>';
+    }
 
   },
 
@@ -143,27 +165,14 @@ var robot = {
     // Use indexOf to find the index position of the searchQuery
     // in the inventory array
     var index = this.inventory.indexOf(searchQuery);
-
+  
     // Use a conditional statement to display a message in the
-    // caption based on the index position of the searchQuery 
-    if(index) {
+    // caption based on the index position of the searchQuery
+    if(index > -1) {
       document.getElementById('caption').innerHTML = '<p>' + this.name + ': Found it!</p>';
     } else {
       document.getElementById('caption').innerHTML = '<p>' + this.name + ': I am sorry. I think I lost the "' + searchQuery + '".</p>';
     }
-
-  },
-
-  //############### WEAPONRY RELATED ############
-  // Display weapons
-  listWeapons: function() {
-
-
-  },
-
-  // Add a weapon to the robot's arsenal
-  addWeapon: function() {
-
 
   }
 };
