@@ -31,6 +31,15 @@ var robot = {
   // Rename your robot
   rename: function(){
 
+    // Rename your robot
+    rename: function(){
+
+      // Get the new name value from #userNameInput input field
+
+      // Change the value of the name property of the robot object
+
+      // Display a message to the user to let them know that the
+      // name has changed
 
 
   },
