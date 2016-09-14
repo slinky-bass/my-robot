@@ -66,7 +66,14 @@ var robot = {
   // Add an item to your robot's inventory
   addItem: function() {
 
+    // Get value of #addItemInput and store in variable "newItem"
 
+    // Add item to inventory array using push method
+
+    // Notify user that the item has been added to the inventory by
+    // displaying it in the caption
+
+    // Clear input field by emptying the value property
 
   },
 
