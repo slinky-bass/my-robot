@@ -10,6 +10,7 @@ var robot = {
   type: '',
   vocabulary: [
   ],
+  inventory: [],
 
   //MY ROBOT FUNCTIONS - WHAT YOUR ROBOT CAN DO
 
@@ -64,6 +65,7 @@ var robot = {
 
   // Add an item to your robot's inventory
   addItem: function() {
+
 
 
   },

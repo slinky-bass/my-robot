@@ -13,6 +13,7 @@ var robot = {
     "How may I serve you?",
     "Have a good day"
   ],
+  inventory: [],
 
   //MY ROBOT FUNCTIONS - WHAT YOUR ROBOT CAN DO
 
@@ -53,7 +54,7 @@ var robot = {
     // Get hours from d object using getHours() method and
     // store it in a variable named "hours"
     // Use conditional statement to add '0' to hours less than 10
-    
+
     // Get hours from d object using getMinutes() method and
     // store it in a variable named "minutes"
     // Use conditional statement to add '0' to minutes less than 10
@@ -74,7 +75,7 @@ var robot = {
     var currentTime = hours + ':' + minutes;
 
     // Display the newly formatted time inside the caption box
-    document.getElementById('caption').innerHTML ='<p>' + this.name + ': The time is now ' + currentTime +'.</p>';
+    document.getElementById('caption').innerHTML = '<p>' + this.name + ': The time is now ' + currentTime +'.</p>';
   },
 
   //############### INVENTORY RELATED ##############
@@ -82,11 +83,24 @@ var robot = {
   listItems: function() {
 
 
+
   },
 
   // Add an item to your robot's inventory
   addItem: function() {
 
+    // Get value of #addItemInput and store in variable "newItem"
+    var newItem = document.getElementById('addItemInput').value;
+
+    // Add item to inventory array using push method
+    this.inventory.push(newItem);
+
+    // Notify user that the item has been added to the inventory by
+    // displaying it in the caption
+    document.getElementById('caption').innerHTML = '<p>' + this.name + ': "' + newItem +'" has been added to your inventory.</p>';
+
+    // Clear input field by emptying the value property
+    document.getElementById('addItemInput').value = '';
 
   },
 
