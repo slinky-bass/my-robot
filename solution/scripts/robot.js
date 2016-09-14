@@ -60,12 +60,14 @@ var robot = {
     // Use conditional statement to add '0' to minutes less than 10
     var hours = d.getHours();
 
+    // BONUS
     if( hours < 10 ) {
       hours = '0' + hours;
     }
 
     var minutes = d.getMinutes();
 
+    // BONUS
     if( minutes < 10 ) {
       minutes = '0' + minutes;
     }

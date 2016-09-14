@@ -43,11 +43,11 @@ var robot = {
 
     // Get hours from d object using getHours() method and
     // store it in a variable named "hours".
-    // Use conditional statement to add '0' to hours less than 10
+    // BONUS: Use conditional statement to add '0' to hours less than 10
 
     // Get hours from d object using getMinutes() method and
     // store it in a variable named "minutes"
-    // Use conditional statement to add '0' to minutes less than 10
+    // BONUS: Use conditional statement to add '0' to minutes less than 10
 
     // Concatenate "hours" and "minutes" to create a HH:MM format and
     // store in a variable named "currentTime"
