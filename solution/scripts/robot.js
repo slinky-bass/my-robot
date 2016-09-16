@@ -181,7 +181,7 @@ var robot = {
 
     // Get value of #userItemInput and save it to a variable
     // named "searchQuery"
-    var searchQuery = document.getElementById('userItemInput').value;
+    var searchQuery = document.getElementById('userItemSearch').value;
 
     // Convert "searchQuery" to lowercase
     searchQuery = searchQuery.toLowerCase();

@@ -48,11 +48,12 @@
           
           <label  for="userItemInput">Enter the name of the item you want to check</label>
           <div class="search-container">
-            <input id="userItemInput" type="text">
+            <input id="userItemSearch" type="text">
             <button class="search-btn" onclick ="robot.findItem()">Search</button>
           </div>
 
           <label>Add or remove items from inventory</label>
+          <input id="userItemInput" type="text">
           <div class="button-group">
             <button onclick="robot.addItem()">Add Item</button>
             <button onclick="robot.removeItem()">Remove Item</button>

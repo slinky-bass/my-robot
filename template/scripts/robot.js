@@ -132,7 +132,7 @@ var robot = {
   // Search for an item to your robot's inventory
   findItem: function() {
 
-    // Get value of #userItemInput and save it to a variable
+    // Get value of #userItemSearch and save it to a variable
     // named "searchQuery"
 
     // Convert "searchQuery" to lowercase
