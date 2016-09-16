@@ -5,6 +5,9 @@ var robot = {
   name: 'Engelbert',
   type: '',
   vocabulary: [
+    "Hello master!",
+    "How may I serve you?",
+    "Have a good day"
   ],
   inventory: [],
 
@@ -12,13 +15,15 @@ var robot = {
 
   //############### SPEECH RELATED ##############
   // Make robot speak
-  speak: function(words) {
+  speak: function() {
 
-    // Prompt user for input save results in a variable named "words"
+    // Prompt user for input between 0 and 2 and save results in the
+    // variable "index"
 
-    // Gets phrase from vocabulary array at index position 'words'
+    // Get the phrase from vocabulary array at index position 'words'
 
-    // Prints to #caption
+    // Display the phrase in #caption
+
   },
 
   // Greets user
@@ -31,19 +36,25 @@ var robot = {
   // Rename your robot
   rename: function(){
 
-    // Rename your robot
-    rename: function(){
+    // Get the new name value from #userNameInput input field
 
-      // Get the new name value from #userNameInput input field
+    // Change the value of the name property of the robot object
 
-      // Change the value of the name property of the robot object
-
-      // Display a message to the user to let them know that the
-      // name has changed
-
+    // Display a message to the user to let them know that the
+    // name has changed
 
   },
 
+  // Paints the robot a different colour
+  // Accepts the new colour which is the background colour
+  // of the div clicked (See index.html)
+  paint: function(newColor) {
+
+    // Change the colour of the robot object
+
+    // Change the colour of the robot element
+
+  },
   //############### TIME RELATED ##############
   // Display time
   time: function() {
@@ -51,18 +62,16 @@ var robot = {
     // Create a new Date object and store it in a variable named "d"
 
     // Get hours from d object using getHours() method and
-    // store it in a variable named "hours".
-    // BONUS: Use conditional statement to add '0' to hours less than 10
+    // store it in a variable named "hours"
 
     // Get hours from d object using getMinutes() method and
     // store it in a variable named "minutes"
     // BONUS: Use conditional statement to add '0' to minutes less than 10
 
     // Concatenate "hours" and "minutes" to create a HH:MM format and
-    // store in a variable named "currentTime"
+    // store in a variable named "time"
 
     // Display the newly formatted time inside the caption box
-
   },
 
   //############### INVENTORY RELATED ##############
@@ -82,7 +91,7 @@ var robot = {
   // Add an item to your robot's inventory
   addItem: function() {
 
-    // Get value of #addItemInput and store in variable "newItem"
+    // Get value of #userItemInput and store in variable "newItem"
 
     // convert string to lowercase
 
@@ -98,7 +107,7 @@ var robot = {
   // Remove an item to your robot's inventory
   removeItem: function() {
 
-    // Get value of #userItemInput and store in variable
+    // Get value of #userItemInput and save it to a variable
     // named "searchQuery"
 
     // Convert "searchQuery" to lowercase
@@ -108,18 +117,21 @@ var robot = {
 
     // Use a conditional statement to check the searchQuery was found
 
-    // Use the splice method to remove the item from the inventory
-    // array using the index position of the item if it was found
-
+    // If the item was found:
+    // Use the splice method to remove the item from the inventory array using the index position of the item
     // Display message to let user know that the item was removed
 
-    // Else if the searchQuery was not found then display message to let user know that the item could not be found
+    // else if the item was not found
+    // Display message to let user know that the item could not be found
+
+
+    // Clear input field by emptying the value property
   },
 
   // Search for an item to your robot's inventory
   findItem: function() {
 
-    // Prompt user for search query and save it to a variable
+    // Get value of #userItemInput and save it to a variable
     // named "searchQuery"
 
     // Convert "searchQuery" to lowercase
@@ -129,6 +141,31 @@ var robot = {
 
     // Use a conditional statement to display a message in the
     // caption based on the index position of the searchQuery
+
+    // Clear input field by emptying the value property
+
+  },
+  // ############### MOVEMENT FUNCTIONS #########################
+  // Use the paint function as a guide on how to change style properties
+  // move robot
+  // Accepts the direction that the robot must travel as an argument
+  move: function(direction) {
+
+    // Create variable "robot" and store the element #robot in it
+    // Create variable "playground" and store the element #playground in it
+
+    // Get the position of the robot element relative to its parent
+    // (playground) by using the offsetLeft and offsetTop methods
+    // Assign the left offset value to the variable named 'x'
+    // Assign the top offset value to the variable named 'y'
+    // e.g. element.offsetLeft;
+
+    // Use a switch statement to change the coordinates based on the direction
+    // The robot should move 40px in the direction that is clicked
+
+    // Use style properties left and top to change the
+    // position of the robot element.
+    // Don't forget to concatenate "px" to the value
 
   }
 };

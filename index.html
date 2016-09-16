@@ -12,6 +12,14 @@
     <div id="playground">
       <div id="caption"></div>
       <div id="robot"></div>
+
+      <div id="moveBtnSet">
+
+         <!-- Create 4 buttons each labelled with the directions 'Left', 'Right', 'Up' and 'Down'. -->
+         <!-- Each button when clicked should call the function 'move' of the 'robot' object. The function accepts the direction in which the robot should move. Pass the direction into the function on each button -->
+
+      </div>
+
     </div>
 
     <!-- Robot UI -->
@@ -42,10 +50,19 @@
 
       </div>
 
-      <div id="customControl">
-        <h3> Customise the Robot </h3>
-        <!--  TODO Rename -->
-        <!--  TODO Change colour -->
+        <div id="customControl">
+          <h3> Customise the Robot </h3>
+
+          <!-- Rename the robot -->
+          <p>Type a new name for your robot below</p>
+          <input id="userNameInput" type="text">
+          <button onclick ="robot.rename()">Rename Robot</button>
+
+          <!-- Change the colour of the robot -->
+          <p>Choose a new colour to paint the robot</p>
+          <div id="colorPallete"></div>
+        </div>
+
       </div>
 
     </div>
