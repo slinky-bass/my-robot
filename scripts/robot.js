@@ -33,6 +33,7 @@ var robot = {
 
   },
 
+  //############### CUSTOMIZE ROBOT ##############
   // Rename your robot
   rename: function(){
 
@@ -46,8 +47,7 @@ var robot = {
   },
 
   // Paints the robot a different colour
-  // Accepts the new colour which is the background colour
-  // of the div clicked (See index.html)
+  // Accepts the new colour which is the background colour of the div clicked (See index.html)
   paint: function(newColor) {
 
     // Change the colour of the robot object
@@ -55,6 +55,7 @@ var robot = {
     // Change the colour of the robot element
 
   },
+
   //############### TIME RELATED ##############
   // Display time
   time: function() {
@@ -145,6 +146,7 @@ var robot = {
     // Clear input field by emptying the value property
 
   },
+
   // ############### MOVEMENT FUNCTIONS #########################
   // Use the paint function as a guide on how to change style properties
   // move robot
