@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-/*body {
-  width: 100%;
-}*/
-
 header {
   padding: 2%;
   background-color: #666;
@@ -28,9 +24,8 @@ h3 {
   text-align: center;
 }
 
-.clear-float {
-  clear: both;
-  display: table;
+.margin-top {
+  margin-top: 20px;
 }
 
 .cell {
@@ -88,12 +83,12 @@ h3 {
   width: 45%;
   color: #750C6E;
   background-color: #fff;
-  border: 1px #750C6E solid;
+  border: 2px #750C6E solid;
 }
 
 .button-group button:hover {
   color: #fff;
-  border: 1px #DA2061 solid;
+  border-color: #DA2061;
 }
 
 .direction-btn-group {
@@ -122,16 +117,12 @@ button {
   width: 60%;
   height: 33px;
   margin: 0 auto;
-  padding: 2% 4%;
+  padding: 1% 4%;
   color: #fff;
   background-color: #750C6E;
   border: 1px #750C6E solid;
   border-radius: 5px;
   cursor: pointer;
-}
-
-button.last {
-  margin-top: 20px;
 }
 
 button:hover {
@@ -161,7 +152,7 @@ button:hover {
 
 input {
   width: 100%;
-  height: 33px
+  height: 33px;
 }
 
 label {
