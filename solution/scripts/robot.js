@@ -139,7 +139,7 @@ var robot = {
     document.getElementById('caption').innerHTML = '<p>' + this.name + ': "' + newItem +'" has been added to your inventory.</p>';
 
     // Clear input field by emptying the value property
-    document.getElementById('addItemInput').value = '';
+    document.getElementById('userItemInput').value = '';
 
   },
 
@@ -156,7 +156,6 @@ var robot = {
     // Use indexOf to find the index position of the searchQuery
     // in the inventory array
     var index = this.inventory.indexOf(searchQuery);
-    alert(index);
 
     // Use a conditional statement to check the searchQuery was found
     if(index > -1) {
@@ -173,6 +172,8 @@ var robot = {
       document.getElementById('caption').innerHTML = '<p>' + this.name + ': I am sorry. I think I lost the "' + searchQuery + '".</p>';
     }
 
+    // Clear input field by emptying the value property
+    document.getElementById('userItemInput').value = '';
   },
 
   // Search for an item to your robot's inventory
@@ -197,6 +198,9 @@ var robot = {
       document.getElementById('caption').innerHTML = '<p>' + this.name + ': I am sorry. I think I lost the "' + searchQuery + '".</p>';
     }
 
+    // Clear input field by emptying the value property
+    document.getElementById('userItemInput').value = '';
+
   },
   // ############### MOVEMENT FUNCTIONS #########################
   // Use the paint function as a guide on how to change style properties
@@ -212,7 +216,6 @@ var robot = {
     // Assign the left offset value to the variable named 'x'
     // Assign the top offset value to the variable named 'y'
     // e.g. element.offsetLeft;
-
     var x = robot.offsetLeft;
     var y = robot.offsetTop;
 
